@@ -20,6 +20,15 @@
   width: 30px;
 }
 
+.home::after {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: url("../../../assets/home.svg") no-repeat center center;
+  top: -1px;
+}
+
 .login {
   color: #333;
   display: flex;

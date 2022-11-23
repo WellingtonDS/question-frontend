@@ -1,0 +1,26 @@
+.banner {
+  width: 300px;
+  margin-top: 7rem;
+  text-align: center;
+}
+
+.title {
+  display: block;
+  font-size: 2rem;
+}
+
+.description {
+  font-weight: bold;
+  margin-top: 2rem;
+  color: #008000;
+}
+
+.loader {
+  animation: is-rotating 60s infinite;
+}
+
+@keyframes is-rotating {
+  to {
+    transform: rotate(1turn);
+  }
+}
