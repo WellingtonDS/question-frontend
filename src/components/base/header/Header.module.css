@@ -1,0 +1,38 @@
+/*Estilizacao do header da pagina*/
+.header {
+  box-shadow: 0 4px 8px rgba(30, 60, 90, 0.2);
+  /* position: fixed; */
+  width: 100%;
+  z-index: 100;
+  background: white;
+  top: 0px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+}
+
+.home {
+  padding: 0.5rem 0;
+  width: 30px;
+}
+
+.login {
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.login::after {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 17px;
+  background: url("../../../assets/usuario.svg") no-repeat center center;
+  margin-left: 0.5rem;
+  position: relative;
+  top: -1px;
+}

@@ -1,0 +1,14 @@
+.home {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+p {
+  font-weight: bold;
+  margin-top: 2rem;
+  color: #fb1;
+}
+
+button {
+  margin-top: 1rem;
+}
