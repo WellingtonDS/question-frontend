@@ -9,7 +9,7 @@ const Header = () => {
       <nav className={`${styles.nav} container`}>
         <Link className={styles.home} to='/' aria-label='Home'>
         </Link>
-        <Link className={`${styles.login} btn`} to='/login'>Criar / Login</Link>
+        <Link className={`${styles.login} btn`} to='/'>Criar / Login</Link>
       </nav>
     </div>
   )
