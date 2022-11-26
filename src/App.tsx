@@ -1,3 +1,4 @@
+import { question } from './API';
 import { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css'
@@ -6,27 +7,29 @@ import Header from './components/base/header/Header';
 import { BannerExam } from './components/bannerExam/BannerExam';
 
 interface Exam {
-  id: string;
-  title: string;
-  asset: string;
-  description: string;
+    id: string;
+    title: string;
+    asset: string;
+    description: string;
 
+}
+
+interface Quest {
+    id: string;
+    description: string;
 }
 
 
 function App() {
 
-  // esse fetch busca a questao da prova em um arquivo json-serve
-  const [exams, setGames] = useState<Exam[]>([]);
-
+  
+  //busca a  prova no json-serve e mostra na tela atraves de interface
+  const [exams, setQuestion] = useState<Exam[]>([]);  
   useEffect(() => {
-    fetch('http://localhost:3000/exams')
+    fetch(question)
     .then(response => response.json())
     .then(data =>{
-      console.log(data);
-      
-      setGames(data)
-      
+      setQuestion(data.exams)
     })
   }, [])
 

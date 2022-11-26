@@ -1,14 +1,17 @@
 // interface do exame antes de abrir a prova.
-
+// import { useContext } from 'react';
+// import { QuestionContext } from '../../context/question';
 import styles from './bannerExam.module.css';
 
-interface BannerExamProps {
-  title: string;
-  description: string;
-  asset: string;
-}
+// interface BannerExamProps {
+//   title: string;
+//   description: string;
+//   asset: string;
+// }
 
 export function BannerExam(props: BannerExamProps) {
+
+  // const [questionState, dispatch] = useContext(QuestionContext);
   return (
     <div className={styles.banner}>
       <a href="">
