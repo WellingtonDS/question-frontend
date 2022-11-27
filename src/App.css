@@ -32,11 +32,6 @@ li {
   margin: 0;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-}
-
 button,
 input {
   display: block;
@@ -86,4 +81,5 @@ a {
 
 .AppBody {
   flex: 1;
+  text-align: -webkit-center;
 }
