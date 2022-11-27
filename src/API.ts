@@ -1,1 +1,0 @@
-export const question = 'https://gist.githubusercontent.com/jcbombardelli/c9286579e36f986ea505c6c31619fe39/raw/7d3fe3e95ed8aed2af629564183d9b08c761ad59/db.json';
