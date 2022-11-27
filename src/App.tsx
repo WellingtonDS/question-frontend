@@ -1,4 +1,5 @@
-import { question } from './API';
+import { Exam, QuestionTask } from './services/api/tarefas/TarefasService';
+import { ApiException } from './services/api/ApiException';
 import { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css'
@@ -6,32 +7,19 @@ import Footer from './components/base/footer/Footer';
 import Header from './components/base/header/Header';
 import { BannerExam } from './components/bannerExam/BannerExam';
 
-interface Exam {
-    id: string;
-    title: string;
-    asset: string;
-    description: string;
-
-}
-
-interface Quest {
-    id: string;
-    description: string;
-}
-
-
 function App() {
-
-  
   //busca a  prova no json-serve e mostra na tela atraves de interface
   const [exams, setQuestion] = useState<Exam[]>([]);  
   useEffect(() => {
-    fetch(question)
-    .then(response => response.json())
-    .then(data =>{
-      setQuestion(data.exams)
-    })
-  }, [])
+    QuestionTask.getExam()
+    .then((result) => {
+      if (result instanceof ApiException) {
+        alert(result.message);
+      } else {
+        setQuestion(result);
+      }
+    });
+}, []);
 
   return (
     <div className="App">
