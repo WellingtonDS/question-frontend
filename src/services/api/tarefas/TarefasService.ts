@@ -3,22 +3,22 @@ import { Api } from "../ApiConfig";
 
 // Aqui é criada as interfaces de acordo com o arquivo json
 export interface Exam {
-  id: number;
+  id?: number;
   title: string;
   asset: string;
   description: string;
 }
 
 export interface Questions {
-  id: number;
-  examId: number;
+  id?: number;
+  examId?: number;
   description: string;
-  orderNumber: number;
+  orderNumber?: number;
 }
 
 export interface Alternatives {
-  id: number;
-  questionId: number;
+  id?: number;
+  questionId?: number;
   description: string;
   isCorrect: boolean;
 }
