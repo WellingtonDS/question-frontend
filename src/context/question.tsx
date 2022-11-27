@@ -1,6 +1,4 @@
-import {createContext, useReducer, useEffect, useState } from 'react';
-import { question } from '../API';
-// import questions from '../data/question';
+import {createContext, useReducer } from 'react';
 
 // estagio de interacao com as questoes.
 const STAGES = ["Start", "Responding", "End"];
@@ -17,25 +15,6 @@ const initialState = {
     currentQuestion: 0
 }
 
-interface Exam {
-    id: string;
-    title: string;
-    asset: string;
-    description: string;
-
-}
-
-const [questions, setQuestion] = useState<Exam[]>([]);  
-  useEffect(() => {
-    fetch(question)
-    .then(response => response.json())
-    .then(data =>{
-        console.log(data, "data");
-        
-      setQuestion(data)
-    })
-  }, [])
-
 // para alterar o estado da aplicacao
 const questionReducer = (state: any, action: any) =>  {
     console.log(state, action);
@@ -47,19 +26,16 @@ const questionReducer = (state: any, action: any) =>  {
             };
 
         case CountActionKind.RESPONDING:
-            const reorderedQuestions = questions.sort(() => {
-                return Math.random() - 0.5;
-            })
+            console.log("teste");
             return {
                 ...state,
-                questions: reorderedQuestions,
             }; 
 
         case "CHANGE_QUESTION":
             const nextQuestion = state.currentQuestion + 1;
             let finished = false;
 
-            if (!questions[nextQuestion]) {
+            if ([nextQuestion]) {
                 finished = true;
             }
             return {
