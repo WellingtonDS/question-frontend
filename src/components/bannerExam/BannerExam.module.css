@@ -1,5 +1,10 @@
+.btnStart {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 .banner {
-  width: 300px;
   margin-top: 7rem;
   text-align: center;
 }

@@ -13,8 +13,18 @@ h2 {
   color: #fb1;
 }
 
-p {
+.spnGradient {
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(
+    89.86deg,
+    #9572fc 23.08%,
+    #43e7ad 33.94%,
+    #e1d55d 88.57%
+  );
+  color: transparent;
   font-weight: bold;
+  font-size: 1.5rem;
 }
 
 .description {
